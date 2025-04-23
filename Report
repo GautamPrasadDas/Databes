@@ -1,0 +1,15 @@
+STEP-1
+Launch an EC2-instance for Window Server.
+a) Give Name-Window-mssql Server
+b) Choose the engine -(Microsoft Window Server 2019 Base)
+c) Instance Type: t2.micro
+d)Give your Key Pair which should in the format .pem file and (.pem file) when you create this file it should save in local machine and give the less permission to pem file.
+e) In Network Setting Choose your VPC that you have created you can also use your default VPC also (But prefferd to create an new VPC) and gateway connection should be internet Gateway.
+f)Give the security group
+g)Give Decription(Optional)
+h)Configure the security group 
+ Set premises 
+ Type          Protocol        Port Range      Source Type  Source(CIDR BLOCKS)
+ RDP            TCP              3389            Anywhere    0.0.0.0/0
+ MSSQL          TCP              1433            Anywhere    0.0.0.0/0  
+f)Lauch the instance.    
